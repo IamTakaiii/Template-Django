@@ -13,14 +13,14 @@ class EnvModel(BaseModel):
     DB_NAME: str
     CORS_ALLOW_ALL_ORIGINS: bool
     CORS_ALLOWED_ORIGINS: list[str] = []
-    AWS_S3_ACCESS_KEY_ID: str = ""
-    AWS_S3_SECRET_ACCESS_KEY: str = ""
-    AWS_STORAGE_BUCKET_NAME: str = ""
-    AWS_S3_REGION_NAME: str = ""
+    AWS_S3_ACCESS_KEY_ID: str
+    AWS_S3_SECRET_ACCESS_KEY: str
+    AWS_STORAGE_BUCKET_NAME: str
+    AWS_S3_REGION_NAME: str
     AWS_S3_SIGNATURE_VERSION: str = "s3v4"
     AWS_S3_FILE_OVERWRITE: bool = False
     AWS_DEFAULT_ACL: str = "public-read"
-    AWS_S3_ENDPOINT_URL: str = ""
+    AWS_S3_ENDPOINT_URL: str
 
 
 ENV = EnvModel(
