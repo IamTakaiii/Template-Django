@@ -2,6 +2,9 @@ from os import getenv
 
 from pydantic import BaseModel
 
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file if it exists
 
 class EnvModel(BaseModel):
     SECRET_KEY: str
